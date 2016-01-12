@@ -144,9 +144,6 @@ EXAMPLES = '''
 
 '''
 
-from ansible.module_utils.basic import *
-from ansible.module_utils.ec2 import *
-
 try:
     from boto.ec2.blockdevicemapping import BlockDeviceType, BlockDeviceMapping
     import boto.ec2.autoscale
@@ -321,4 +318,9 @@ def main():
     elif state == 'absent':
         delete_launch_config(connection, module)
 
-main()
+# import module snippets
+from ansible.module_utils.basic import *
+from ansible.module_utils.ec2 import *
+
+if __name__ == '__main__':
+    main()

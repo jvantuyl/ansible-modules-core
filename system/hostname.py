@@ -627,4 +627,5 @@ def main():
                                         ansible_fqdn=socket.getfqdn(),
                                         ansible_domain='.'.join(socket.getfqdn().split('.')[1:])))
 
-main()
+if __name__ == '__main__':
+    main()

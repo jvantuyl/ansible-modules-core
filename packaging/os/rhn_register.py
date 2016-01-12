@@ -363,5 +363,5 @@ def main():
 
             module.exit_json(changed=True, msg="System successfully unregistered from %s." % rhn.hostname)
 
-
-main()
+if __name__ == '__main__':
+    main()

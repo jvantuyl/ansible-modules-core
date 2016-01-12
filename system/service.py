@@ -1507,4 +1507,6 @@ def main():
 
 from ansible.module_utils.basic import *
 
-main()
+# import module snippets
+if __name__ == '__main__':
+    main()

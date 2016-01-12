@@ -140,9 +140,8 @@ def main():
     module.exit_json(**data)
 
 # import module snippets
-
 from ansible.module_utils.basic import *
-
 from ansible.module_utils.facts import *
 
-main()
+if __name__ == '__main__':
+    main()

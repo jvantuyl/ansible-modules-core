@@ -597,7 +597,9 @@ def main():
     cloudfiles(module, container, src, dest, method, typ, meta, clear_meta, structure, expires)
 
 
+# import module snippets
 from ansible.module_utils.basic import *
 from ansible.module_utils.rax import *
 
-main()
+if __name__ == '__main__':
+    main()

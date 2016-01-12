@@ -730,7 +730,9 @@ def main():
                 changed=False, msg='Role update not currently supported by boto.')
         module.exit_json(changed=changed, roles=role_list)
 
+# import module snippets
 from ansible.module_utils.basic import *
 from ansible.module_utils.ec2 import *
 
-main()
+if __name__ == '__main__':
+    main()

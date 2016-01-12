@@ -337,7 +337,9 @@ def main():
                                                        state)
     module.exit_json(changed=changed, group_name=name, policies=current_policies, msg=msg)
 
+# import module snippets
 from ansible.module_utils.basic import *
 from ansible.module_utils.ec2 import *
 
-main()
+if __name__ == '__main__':
+    main()
